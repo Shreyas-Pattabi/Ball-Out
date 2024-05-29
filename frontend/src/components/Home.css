@@ -1,0 +1,128 @@
+/* Home.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .home {
+    text-align: center;
+  }
+  
+  .header {
+    background: linear-gradient(90deg, #0033cc, #990000);
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  }
+  
+  .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  
+  .header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header nav ul li {
+    display: inline;
+  }
+  
+  .header nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+  
+  .header nav ul li a:hover {
+    color: #ffcc00;
+  }
+  
+  .hero {
+    background: linear-gradient(180deg, #0033cc, #990000);
+    color: white;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin: 0 0 20px;
+  }
+  
+  .hero p {
+    font-size: 1.5em;
+    margin: 0 0 30px;
+  }
+  
+  .hero button {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero button:hover {
+    background-color: #e6b800;
+  }
+  
+  .features {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .features h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #0033cc;
+  }
+  
+  .feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .feature-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: left;
+    transition: transform 0.3s;
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .feature-item h3 {
+    margin-top: 0;
+    color: #990000;
+  }
+  
+  .footer {
+    background-color: #0033cc;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
