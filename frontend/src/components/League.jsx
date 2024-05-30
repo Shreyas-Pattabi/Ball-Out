@@ -26,7 +26,7 @@ function generateRandomData() {
         wins = losses;
       }
     } else {
-      wins = Math.floor(Math.random() * 11); // Random number of wins between 0 and 10
+      wins = Math.floor(Math.random() * 10); // Random number of wins between 0 and 10
     }
     // Ensure total draws are even
     if (i === teams.length - 1) {
