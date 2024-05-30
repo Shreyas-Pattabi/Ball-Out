@@ -1,6 +1,7 @@
 import React from 'react';
 import './EditLineup.css';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logoBO.png'
 
 function generateRandomData() {
   const teams = ['Team A', 'Team B', 'Team C', 'Team D', 'Team E', 'Team F', 'Team G', 'Team H', 'Team I', 'Team J'];
@@ -50,13 +51,16 @@ const League = () => {
   return (
     <div className="home">
       <header className="header">
-        <div className="logo">Ball Out</div>
+        <div className="logo">
+        <img src={logo} alt="BO Logo" />
+          <span>Ball Out</span>
+        </div>
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/">Login</Link></li>
             <li><Link to="/lineup">Lineup</Link></li>
-            <li><Link to="/matchup">Team</Link></li>
+            <li><Link to="/matchup">Matchup</Link></li>
             <li><Link to="/my-league">League</Link></li>
             <li><Link to="/draft">Draft</Link></li>
             <li><Link to="/players">Free Agents</Link></li>
