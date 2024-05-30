@@ -48,7 +48,7 @@ function generateRandomData() {
 
     const pointsFor = Math.floor(Math.random() * 10001) + 10000; // Random number between 10000 and 20000
     const pointsAgainst = Math.floor(Math.random() * 10001) + 10000; // Random number between 10000 and 20000
-    const winPercentage = (wins / 10) * 100 || 0; // Calculate win percentage
+    const winPercentage = ((wins / 10) * 100 || 0) + draws/1000; // Calculate win percentage
     data.push({ team: teams[i], wins, losses, draws, pointsFor, pointsAgainst, winPercentage });
   }
   return data.sort((a, b) => b.winPercentage - a.winPercentage); // Sort teams based on win percentage
