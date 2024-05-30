@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './JoinLeague.css';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logoBO.png';
 
 const JoinLeague = () => {
   const [leagueCode, setLeagueCode] = useState('');
@@ -20,7 +21,7 @@ const JoinLeague = () => {
       <header className="header">
         <div className="logo">
           <Link to="/join-league">
-            <img src={require('../assets/logoBO.png')} alt="Ball Out Logo" />
+            <img src={logo} alt="Ball Out Logo" />
           </Link>
         </div>
         <nav>
