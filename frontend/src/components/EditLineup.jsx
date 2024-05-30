@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import './EditLineup.css';
+import { Link } from 'react-router-dom';
 
 const EditLineup = () => {
     const initialPlayers = [
@@ -48,6 +49,21 @@ const EditLineup = () => {
     };
 
     return (
+        <div className="home">
+      <header className="header">
+        <div className="logo">Ball Out</div>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/">Login</Link></li>
+            <li><Link to="/lineup">Lineup</Link></li>
+            <li><Link to="/matchup">Team</Link></li>
+            <li><Link to="/my-league">League</Link></li>
+            <li><Link to="/draft">Draft</Link></li>
+            <li><Link to="/players">Free Agents</Link></li>
+          </ul>
+        </nav>
+      </header>
         <table className="edit-lineup-table">
             <thead>
                 <tr>
@@ -82,6 +98,7 @@ const EditLineup = () => {
                 ))}
             </tbody>
         </table>
+        </div>
     );
 };
 
