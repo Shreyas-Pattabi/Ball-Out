@@ -27,8 +27,6 @@ const Login = () => {
       <div className="outer">
       <video src={videoBg2} autoPlay loop muted />
       <div className="background">
-        <div className="shape"></div>
-        <div className="shape"></div>
       </div>
       
       <form className="login-form">
