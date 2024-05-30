@@ -1,0 +1,36 @@
+.edit-lineup-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: black;
+    color: white;
+}
+
+.edit-lineup-table th,
+.edit-lineup-table td {
+    padding: 8px;
+    text-align: left;
+}
+
+.edit-lineup-table th {
+    background-color: #001f3f;
+}
+
+.edit-lineup-table tbody tr:nth-child(even) {
+    background-color: #111;
+}
+
+.edit-lineup-table tbody tr:hover {
+    background-color: #FF4136;
+}
+
+.edit-lineup-table a {
+    color: #0074D9;
+}
+
+.custom-heading {
+    color: white;
+    font-weight: bold;
+    background-color: red;
+    font-size: 24px;
+    text-align: center;
+}

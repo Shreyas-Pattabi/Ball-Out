@@ -1,0 +1,47 @@
+.teams-table-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+}
+
+.team-table {
+    border-collapse: collapse;
+    margin: 20px;
+    width: 45%;
+}
+
+.team-table th, .team-table td {
+    padding: 8px;
+    text-align: left;
+}
+
+.team-table th {
+    background-color: #001f3f;
+    color: white;
+}
+
+.team-table tr{
+    height: 75px;
+}
+
+.team-table tr:nth-child(even) {
+    background-color: #444;
+}
+
+.team-table tr:hover {
+    background-color: #555;
+}
+
+.team-table tfoot td {
+    background-color: #FF4136;
+    color: white;
+    font-weight: bold;
+}
+
+.matchup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
