@@ -89,7 +89,7 @@ const Matchup = () => {
           </ul>
         </nav>
       </header>
-        <div className="teams-table-container">
+        <div className="teams-table-container">    
             <table className="team-table">
                 <thead>
                     <tr>

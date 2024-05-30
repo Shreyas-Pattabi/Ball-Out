@@ -1,47 +1,56 @@
 .teams-table-container {
     display: flex;
-    justify-content: space-around;
-    background-color: black;
-    color: white;
+    justify-content: space-between;
+    background-color: #1f1f1f; /* Darker background */
+    color: #fff; /* Lighter text color */
+    padding: 20px; /* Increased padding for better spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
 }
 
 .team-table {
     border-collapse: collapse;
-    margin: 20px;
-    width: 45%;
+    margin: 0;
+    width: 48%; /* Adjusted width for better spacing */
+    background-color: #2a2a2a; /* Darker background for table */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflowing content */
 }
 
 .team-table th, .team-table td {
-    padding: 8px;
+    padding: 12px; /* Increased padding */
     text-align: left;
 }
 
 .team-table th {
-    background-color: #001f3f;
-    color: white;
+    background-color: #171717; /* Darker background for table header */
+    color: #e0e0e0; /* Light shade of white for table header text */
+    font-weight: bold;
 }
 
-.team-table tr{
+.team-table tr {
     height: 75px;
 }
 
 .team-table tr:nth-child(even) {
-    background-color: #444;
+    background-color: #232323; /* Slightly lighter background for even rows */
 }
 
 .team-table tr:hover {
-    background-color: #555;
+    background-color: #333; /* Darker background on hover */
 }
 
 .team-table tfoot td {
-    background-color: #FF4136;
-    color: white;
+    background-color: #444; /* Dark background for table footer */
+    color: #fff;
     font-weight: bold;
 }
 
 .matchup-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: #1f1f1f; /* Darker background for matchup container */
 }
