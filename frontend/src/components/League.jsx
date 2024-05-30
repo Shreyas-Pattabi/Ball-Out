@@ -14,23 +14,33 @@ function generateRandomData() {
     let wins, losses, draws;
     
     // Ensure total wins equal total losses
-    if (totalWins === totalLosses) {
-      wins = Math.floor(Math.random() * 6); // Random number of wins between 0 and 5
-      losses = wins;
-    } else if (totalWins > totalLosses) {
-      wins = Math.floor(Math.random() * (5 - totalWins + totalLosses + 1)); // Ensure total wins equal total losses
-      losses = wins;
+    if(i%2 == 0){
+      if (totalWins === totalLosses) {
+        wins = 5;
+        losses = wins;
+      } else if (totalWins > totalLosses) {
+        wins = Math.floor(Math.random() * (5 - totalWins + totalLosses + 1)); // Ensure total wins equal total losses
+        losses = wins;
+      } else {
+        losses = Math.floor(Math.random() * (5 - totalLosses + totalWins + 1)); // Ensure total wins equal total losses
+        wins = losses;
+      }
     } else {
-      losses = Math.floor(Math.random() * (5 - totalLosses + totalWins + 1)); // Ensure total wins equal total losses
-      wins = losses;
+      wins = Math.floor(Math.random() * 11); // Random number of wins between 0 and 10
     }
-
     // Ensure total draws are even
     if (i === teams.length - 1) {
       draws = totalDraws % 2 === 0 ? 0 : 1;
     } else {
-      draws = Math.floor(Math.random() * 3); // Random number of draws between 0 and 2
+      draws = Math.floor(Math.random() * Math.min(3, (10 - wins + 1))); // Random number of draws between 0 and 2
     }
+
+    if(10 - draws - wins < 0){
+      losses = 0;
+      draws = 0;
+    }
+
+    losses = 10 - draws - wins;
 
     totalWins += wins;
     totalLosses += losses;
@@ -45,8 +55,15 @@ function generateRandomData() {
 }
 
 const League = () => {
+  const teams = ['Team A', 'Team B', 'Team C', 'Team D', 'Team E', 'Team F', 'Team G', 'Team H', 'Team I', 'Team J'];
   const eastTeams = generateRandomData().slice(0, 5);
+  for(let i = 0; i < 5; i++){
+    eastTeams[i].team = teams[i];
+  }
   const westTeams = generateRandomData().slice(0, 5);
+  for(let i = 0; i < 5; i++){
+    westTeams[i].team = teams[i + 5];
+  }
 
   return (
     <div className="home">
