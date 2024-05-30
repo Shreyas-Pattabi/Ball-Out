@@ -120,8 +120,18 @@ body {
 }  
 
 .hero {
-    background: linear-gradient(180deg, rgba(0, 51, 204, 0.8), rgba(153, 0, 0, 0.8)), url('C:\Users\jainm\Ball-Out\frontend\public\USATSI_23409094.jpg') no-repeat center center/cover;
+    background: linear-gradient(180deg, rgba(0, 51, 204, 0.8), rgba(153, 0, 0, 0.8)), url('..\assets\USATSI_23409094.jpg') no-repeat center center/cover;
     color: white;
     padding: 100px 20px;
   }
-  
+
+  .footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #990000;
+  }
