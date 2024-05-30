@@ -3,24 +3,20 @@ import React from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logoBO.png'
-
 const Home = () => {
   return (
     <div className="home">
       <header className="header">
         <div className="logo">
-          <img src={logo} alt="BO Logo" />
+          <img src={logo} alt="Ball Out Logo" />
           <span>Ball Out</span>
         </div>
         <nav>
           <ul>
-          <li><Link to="/">Home</Link></li>
-            <li><Link to="/">Login</Link></li>
-            <li><Link to="/lineup">Lineup</Link></li>
-            <li><Link to="/matchup">Matchup</Link></li>
-            <li><Link to="/my-league">League</Link></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/matchup">Team</Link></li>
             <li><Link to="/draft">Draft</Link></li>
-            <li><Link to="/players">Free Agents</Link></li>
+            <li><Link to="/players">Players</Link></li>
           </ul>
         </nav>
       </header>
@@ -28,7 +24,7 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content">
           <h1>Welcome to Ball Out!</h1>
-          <p>Join the first ever bitcoin integrated immersive fantasy sports experience. Compete with friends, track your progress, and win!</p>
+          <p>Join the first ever bitcoin integrated immersive fantasy sports experience. Compete with friends, track your progress, and win amazing prizes!</p>
           <button>Login</button>
         </div>
       </section>
@@ -45,10 +41,31 @@ const Home = () => {
             <p>Create and manage your own custom leagues with friends.</p>
           </div>
           <div className="feature-item">
-            <h3>sum sum</h3>
-            <p>sum sum sum sum.</p>
+            <h3>Exciting Rewards</h3>
+            <p>Win exclusive prizes and rewards based on your performance.</p>
           </div>
         </div>
+      </section>
+
+      <section className="additional-content">
+        <h2><br />
+          <br />
+          <br />
+          <br />
+          <br /></h2>
+        <p> 
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br /><br />
+
+        </p>
       </section>
 
       <footer className="footer">
