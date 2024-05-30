@@ -1,13 +1,13 @@
 import React from 'react';
 import {useState, useEffect } from 'react';
-import {
-  AppConfig,
-  UserSession,
-  showConnect,
-  openContractCall,
-} from "@stacks/connect";
-import { StacksMocknet } from "@stacks/network";
-import { principalCV, stringUtf8CV, uintCV } from "@stacks/transactions";
+// import {
+//   AppConfig,
+//   UserSession,
+//   showConnect,
+//   openContractCall,
+// } from "@stacks/connect";
+// import { StacksMocknet } from "@stacks/network";
+// import { principalCV, stringUtf8CV, uintCV } from "@stacks/transactions";
 import { Link } from 'react-router-dom';
 import logo from '../assets/logoBO.png'
 import './CreateAccount.css';

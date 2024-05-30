@@ -92,6 +92,6 @@ def updateData():
        result = players.insert_many(fantasyList)
    except pymongo.errors.OperationFailure:
        print("Write Failed")
-       
+
 # updateData()
 

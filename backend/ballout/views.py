@@ -7,3 +7,4 @@ from django.http import JsonResponse
 @api_view(['GET'])
 def get_players(request):
     return JsonResponse(dumps(list(db.get_players().find())), safe=False)
+
