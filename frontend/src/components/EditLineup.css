@@ -1,36 +1,47 @@
 .edit-lineup-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: black;
-    color: white;
+    background-color: #202124; /* Darker background */
+    color: #fff; /* Lighter text color */
 }
 
 .edit-lineup-table th,
 .edit-lineup-table td {
-    padding: 8px;
+    padding: 12px; /* Increased padding */
     text-align: left;
 }
 
 .edit-lineup-table th {
-    background-color: #001f3f;
+    background-color: #181a1b; /* Darker background for table header */
+    font-weight: bold;
 }
 
 .edit-lineup-table tbody tr:nth-child(even) {
-    background-color: #111;
+    background-color: #17191a; /* Slightly lighter background for even rows */
+}
+
+.edit-lineup-table tbody tr:nth-child(2) {
+    border-bottom: 2px dashed #5a5a5a; /* Solid line border under the second row */
 }
 
 .edit-lineup-table tbody tr:hover {
-    background-color: #FF4136;
+    background-color: #232526; /* Darker background on hover */
 }
 
 .edit-lineup-table a {
-    color: #0074D9;
+    color: #0077c8; /* Blue color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.edit-lineup-table a:hover {
+    text-decoration: underline; /* Underline links on hover */
 }
 
 .custom-heading {
     color: white;
     font-weight: bold;
-    background-color: red;
+    background-color: #ff3d00; /* Orange background for heading */
     font-size: 24px;
     text-align: center;
+    padding: 16px; /* Increased padding for heading */
 }

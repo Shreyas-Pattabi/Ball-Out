@@ -27,12 +27,16 @@ const Home = () => {
       <div className='top-bg'>
         <video src={videoBg} autoPlay loop muted />
         <div className="hero-content">
-          <h1 className='mainTitle'>Welcome to BALL OUT!</h1>
+          <h1 className='mainTitle'>Welcome to BALL OUT</h1>
           <p>Join the first ever bitcoin integrated immersive fantasy sports experience. Compete with friends, track your progress, and win amazing prizes!</p>
-
-          <Link to="/create-account" target="_blank">
-           <button >Create Account!</button>
-          </Link>
+          <div className="hero-buttons">
+            <Link to="/create-account" target="_blank">
+              <button>Create Account</button>
+            </Link>
+            <Link to="/join-league" target="_blank">
+              <button>Join a League</button>
+            </Link>
+          </div>
         </div>
       </div>
       <section id="features" className="features">

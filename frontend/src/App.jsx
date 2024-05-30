@@ -6,7 +6,13 @@ import Players from './components/Players'
 import League from './components/League'
 import EditLineup from './components/EditLineup';
 import Login from './components/Login'
+<<<<<<< HEAD
 import Tester from './Tester';
+=======
+import CreateAccount from './components/CreateAccount';
+import JoinLeague from './components/JoinLeague';
+
+>>>>>>> 02ad387f92263d3e43ab8731c038073281866755
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,6 +30,12 @@ const App = () => {
         <Route path = "/my-league" element = {<League/>}/>
         <Route path = "/lineup" element = {<EditLineup/>}/>
         <Route path = "/login" element = {<Login/>}/>
+<<<<<<< HEAD
+=======
+        <Route path = "/create-account" element = {<CreateAccount/>}/>
+        <Route path = "/join-league" element = {<JoinLeague/>}/>
+
+>>>>>>> 02ad387f92263d3e43ab8731c038073281866755
       </Routes>
     </Router>
   );
