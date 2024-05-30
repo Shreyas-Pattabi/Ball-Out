@@ -1,6 +1,6 @@
-// src/Home.js
 import React from 'react';
-import './Home.css';
+import './home.css'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -9,10 +9,10 @@ const Home = () => {
         <div className="logo">Fantasy Sports</div>
         <nav>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/matchup">Team</Link></li>
+            <li><Link to="/draft">Draft</Link></li>
+            <li><Link to="/players">Players</Link></li>
           </ul>
         </nav>
       </header>

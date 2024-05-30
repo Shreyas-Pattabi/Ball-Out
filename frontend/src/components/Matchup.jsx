@@ -1,5 +1,6 @@
 import React from 'react';
 import './Matchup.css';
+import './Home.css'
 
 const Matchup = () => {
     const currentTime = new Date();
@@ -68,6 +69,7 @@ const Matchup = () => {
     const totalPointsTeamB = calculateTotalPoints(teamB);
 
     return (
+        
         <div className="teams-table-container">
             <table className="team-table">
                 <thead>
