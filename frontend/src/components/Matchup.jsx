@@ -87,7 +87,7 @@ const Matchup = () => {
                     {teamA.map((player, index) => (
                         <tr key={index}>
                             <td>{index > 12 ? 'IR' : index > 9 ? 'BENCH' : index > 6 ? 'FLEX' : index > 5 ? 'F' : index > 4 ? 'G' : index > 3 ? 'C' : index > 2 ? 'PF' : index > 1 ? 'SF' : index > 0 ? 'SG' : 'PG'}</td>
-                            <td><a href={'/players'}>{player.name}</a></td>
+                            <td><a href={'/player-card'}>{player.name}</a></td>
                             <td>{player.team}</td>
                             <td>{player.injury === 'OUT' || player.injury === 'SUSP' ? 0 : player.pointsToday}</td>
                             <td>{player.gameTime}</td>
