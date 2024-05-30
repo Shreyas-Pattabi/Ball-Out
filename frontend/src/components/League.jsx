@@ -1,5 +1,6 @@
 import React from 'react';
 import './EditLineup.css';
+import { Link } from 'react-router-dom';
 
 function generateRandomData() {
   const teams = ['Team A', 'Team B', 'Team C', 'Team D', 'Team E', 'Team F', 'Team G', 'Team H', 'Team I', 'Team J'];
@@ -47,6 +48,21 @@ const League = () => {
   const westTeams = generateRandomData().slice(0, 5);
 
   return (
+    <div className="home">
+      <header className="header">
+        <div className="logo">Ball Out</div>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/">Login</Link></li>
+            <li><Link to="/lineup">Lineup</Link></li>
+            <li><Link to="/matchup">Team</Link></li>
+            <li><Link to="/my-league">League</Link></li>
+            <li><Link to="/draft">Draft</Link></li>
+            <li><Link to="/players">Free Agents</Link></li>
+          </ul>
+        </nav>
+      </header>
     <div>
       <h1 className='custom-heading'>Eastern Conference</h1>
       <table className="edit-lineup-table"> {/* Apply the CSS class */}
@@ -104,6 +120,7 @@ const League = () => {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };
