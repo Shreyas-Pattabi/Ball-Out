@@ -1,16 +1,19 @@
+// src/Home.jsx
 import React from 'react';
-import './Home.css'
+import './Home.css';
 import { Link } from 'react-router-dom';
-
+import logo from '../assets/logoBO.png'
 const Home = () => {
   return (
     <div className="home">
       <header className="header">
-        <div className="logo">Ball Out</div>
+        <div className="logo">
+          <img src={logo} alt="BO Logo" />
+          <span>Ball Out</span>
+        </div>
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/">Login</Link></li>
             <li><Link to="/matchup">Team</Link></li>
             <li><Link to="/draft">Draft</Link></li>
             <li><Link to="/players">Players</Link></li>
@@ -21,8 +24,8 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content">
           <h1>Welcome to Ball Out!</h1>
-          <p>Join the first ever bitcoin integrated immersive fantasy sports experience. Compete with friends, track your progress, and win amazing prizes!</p>
-          <button>Get Started</button>
+          <p>Join the first ever bitcoin integrated immersive fantasy sports experience. Compete with friends, track your progress, and win!</p>
+          <button>Login</button>
         </div>
       </section>
 
@@ -38,8 +41,8 @@ const Home = () => {
             <p>Create and manage your own custom leagues with friends.</p>
           </div>
           <div className="feature-item">
-            <h3>Exciting Rewards</h3>
-            <p>Win exclusive prizes and rewards based on your performance.</p>
+            <h3>sum sum</h3>
+            <p>sum sum sum sum.</p>
           </div>
         </div>
       </section>

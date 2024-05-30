@@ -14,20 +14,31 @@ body {
 }
 
 .header {
-  background: #0033cc;
+  background: #000000;
   color: white;
   padding: 10px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid #990000;
+  border-bottom: 0px solid #990000;
 }
 
 .logo {
-  font-size: 1.8em;
-  font-weight: bold;
-}
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 65px;
+    margin-right: 10px;
+  }
+  
+  .logo span {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  
 
 .header nav ul {
   list-style: none;
@@ -106,47 +117,11 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
-}
+}  
 
-.feature-item {
-  background-color: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  text-align: left;
-  transition: transform 0.3s;
-}
-
-.feature-item:hover {
-  transform: translateY(-10px);
-}
-
-.feature-item h3 {
-  margin-top: 0;
-  color: #990000;
-}
-
-.footer {
-  background-color: #0033cc;
-  color: white;
-  padding: 20px 0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  border-top: 2px solid #990000;
-}
-
-/* Hero section background image (optional) */
 .hero {
     background: linear-gradient(180deg, rgba(0, 51, 204, 0.8), rgba(153, 0, 0, 0.8)), url('C:\Users\jainm\Ball-Out\frontend\public\USATSI_23409094.jpg') no-repeat center center/cover;
     color: white;
     padding: 100px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
   }
   
