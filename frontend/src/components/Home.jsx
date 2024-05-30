@@ -28,7 +28,7 @@ const Home = () => {
         <div className="hero-content">
           <h1>Welcome to Ball Out!</h1>
           <p>Join the first ever bitcoin integrated immersive fantasy sports experience. Compete with friends, track your progress, and win amazing prizes!</p>
-          <button>Login</button>
+          <button>Create An Account</button>
         </div>
       </section>
 
