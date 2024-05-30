@@ -44,8 +44,8 @@ const Home = () => {
             <p>Create and manage your own custom leagues with friends.</p>
           </div>
           <div className="feature-item">
-            <h3>Exciting Rewards</h3>
-            <p>Win exclusive prizes and rewards based on your performance.</p>
+            <h3>Winners Everday</h3>
+            <p>Win exclusive rewards based on your performance every game day.</p>
           </div>
         </div>
       </section>
@@ -72,7 +72,7 @@ const Home = () => {
       </section>
 
       <footer className="footer">
-        <p>&copy; 2024 Fantasy Sports App. All rights reserved.</p>
+        <p>&copy; 2024 Ball Out App. All rights reserved.</p>
       </footer>
     </div>
   );
