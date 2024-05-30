@@ -1,0 +1,101 @@
+/* Basic reset */
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Jacquard+12&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.join-league {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.header .logo img {
+  height: 50px;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main-content h1 {
+  margin-bottom: 20px;
+}
+
+.join-league-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.join-league-form label {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.join-league-form input {
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.join-league-form button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.join-league-form button:hover {
+  background-color: #ff6347;
+}
+
+.footer {
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+}

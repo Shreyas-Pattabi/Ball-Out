@@ -7,6 +7,7 @@ import League from './components/League'
 import EditLineup from './components/EditLineup';
 import Login from './components/Login'
 import CreateAccount from './components/CreateAccount';
+import JoinLeague from './components/JoinLeague';
 
 import {
   BrowserRouter as Router,
@@ -26,6 +27,8 @@ const App = () => {
         <Route path = "/lineup" element = {<EditLineup/>}/>
         <Route path = "/login" element = {<Login/>}/>
         <Route path = "/create-account" element = {<CreateAccount/>}/>
+        <Route path = "/join-league" element = {<JoinLeague/>}/>
+
       </Routes>
     </Router>
   );
