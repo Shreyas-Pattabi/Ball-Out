@@ -1,28 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './JoinLeague.css';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logoBO.png';
 
 const JoinLeague = () => {
-  const [leagueCode, setLeagueCode] = useState('');
-
-  const handleInputChange = (e) => {
-    setLeagueCode(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('League Code:', leagueCode);
-  };
+  const leagues = [
+    { name: 'Bronze League', entryFee: '0.10 BTC' },
+    { name: 'Silver League', entryFee: '0.50 BTC' },
+    { name: 'Gold League', entryFee: '1.00 BTC' },
+  ];
 
   return (
-    <div className="join-league">
+    <div className="home">
       <header className="header">
         <div className="logo">
-          <Link to="/join-league">
-            <img src={logo} alt="Ball Out Logo" />
-          </Link>
+          <img src={logo} alt="Ball Out Logo" />
         </div>
         <nav>
           <ul>
@@ -36,20 +28,18 @@ const JoinLeague = () => {
           </ul>
         </nav>
       </header>
-      <main className="main-content">
-        <h1>Join a League</h1>
-        <form onSubmit={handleSubmit} className="join-league-form">
-          <label htmlFor="leagueCode">Enter League Code:</label>
-          <input
-            type="text"
-            id="leagueCode"
-            value={leagueCode}
-            onChange={handleInputChange}
-            required
-          />
-          <button type="submit">Join League</button>
-        </form>
-      </main>
+      <div className="join-league-container">
+        <h1 className="mainTitle">Join a League</h1>
+        <div className="leagues-list">
+          {leagues.map((league, index) => (
+            <div className="league-card" key={index}>
+              <h2>{league.name}</h2>
+              <p><strong>Entry Fee:</strong> {league.entryFee}</p>
+              <button className="join-button">Join Now</button>
+            </div>
+          ))}
+        </div>
+      </div>
       <footer className="footer">
         <p>&copy; 2024 Ball Out App. All rights reserved.</p>
       </footer>
