@@ -6,10 +6,11 @@ const Home = () => {
   return (
     <div className="home">
       <header className="header">
-        <div className="logo">Fantasy Sports</div>
+        <div className="logo">Ball Out</div>
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
+            <li><Link to="/">Login</Link></li>
             <li><Link to="/matchup">Team</Link></li>
             <li><Link to="/draft">Draft</Link></li>
             <li><Link to="/players">Players</Link></li>
@@ -19,8 +20,8 @@ const Home = () => {
 
       <section className="hero">
         <div className="hero-content">
-          <h1>Welcome to Fantasy Sports</h1>
-          <p>Join the most immersive fantasy sports experience ever. Compete with friends, track your progress, and win amazing prizes!</p>
+          <h1>Welcome to Ball Out!</h1>
+          <p>Join the first ever bitcoin integrated immersive fantasy sports experience. Compete with friends, track your progress, and win amazing prizes!</p>
           <button>Get Started</button>
         </div>
       </section>
@@ -29,7 +30,7 @@ const Home = () => {
         <h2>Why Choose Us?</h2>
         <div className="feature-list">
           <div className="feature-item">
-            <h3>Real-Time Stats</h3>
+            <h3>Bitcoin Integration</h3>
             <p>Stay updated with real-time player statistics and game scores.</p>
           </div>
           <div className="feature-item">
