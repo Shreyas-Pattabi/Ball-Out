@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import logo from '../assets/logoBO.png';
+import videoBg2 from '../assets/Loginbg.mp4';
 
 const Login = () => {
   return (
@@ -23,7 +24,8 @@ const Login = () => {
           </ul>
         </nav>
       </header>
-      
+      <div className="outer">
+      <video src={videoBg2} autoPlay loop muted />
       <div className="background">
         <div className="shape"></div>
         <div className="shape"></div>
@@ -50,6 +52,7 @@ const Login = () => {
           <div className="social-button fb"><i className="fab fa-facebook"></i> Facebook</div>
         </div>
       </form>
+      </div>
     </div>
   );
 };
