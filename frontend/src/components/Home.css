@@ -1,128 +1,152 @@
 /* Home.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-  }
-  
-  .home {
-    text-align: center;
-  }
-  
-  .header {
-    background: linear-gradient(90deg, #0033cc, #990000);
-    color: rgb(255, 255, 255);
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
-  }
-  
-  .logo {
-    font-size: 1.8em;
-    font-weight: bold;
-  }
-  
-  .header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .header nav ul li {
-    display: inline;
-  }
-  
-  .header nav ul li a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s;
-  }
-  
-  .header nav ul li a:hover {
-    color: #ffcc00;
-  }
-  
-  .hero {
-    background: linear-gradient(180deg, #0033cc, #990000);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.home {
+  text-align: center;
+}
+
+.header {
+  background: #0033cc;
+  color: white;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #990000;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.header nav ul li {
+  display: inline;
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+  color: #ffcc00;
+}
+
+.hero {
+  background: linear-gradient(180deg, #0033cc, #990000);
+  color: white;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin: 0 0 20px;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin: 0 0 30px;
+}
+
+.hero button {
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #e6b800;
+}
+
+.features {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+.features h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #0033cc;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+}
+
+.feature-item h3 {
+  margin-top: 0;
+  color: #990000;
+}
+
+.footer {
+  background-color: #0033cc;
+  color: white;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid #990000;
+}
+
+/* Hero section background image (optional) */
+.hero {
+    background: linear-gradient(180deg, rgba(0, 51, 204, 0.8), rgba(153, 0, 0, 0.8)), url('C:\Users\jainm\Ball-Out\frontend\public\USATSI_23409094.jpg') no-repeat center center/cover;
     color: white;
     padding: 100px 20px;
-  }
-  
-  .hero h1 {
-    font-size: 3em;
-    margin: 0 0 20px;
-  }
-  
-  .hero p {
-    font-size: 1.5em;
-    margin: 0 0 30px;
-  }
-  
-  .hero button {
-    background-color: #ffcc00;
-    color: black;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .hero button:hover {
-    background-color: #e6b800;
-  }
-  
-  .features {
-    padding: 50px 20px;
-    background-color: #f0f0f0;
-  }
-  
-  .features h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #0033cc;
-  }
-  
-  .feature-list {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .feature-item {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
     text-align: left;
-    transition: transform 0.3s;
-  }
-  
-  .feature-item:hover {
-    transform: translateY(-10px);
-  }
-  
-  .feature-item h3 {
-    margin-top: 0;
-    color: #990000;
-  }
-  
-  .footer {
-    background-color: #0033cc;
-    color: rgb(0, 0, 0);
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
   }
   

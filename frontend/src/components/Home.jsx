@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="home">
       <header className="header">
-        <div className="logo">Ball Out</div>
+        <div className="logo">Fantasy Sports</div>
         <nav>
           <ul>
             <li><a href="#home">Home</a></li>
@@ -18,9 +18,11 @@ const Home = () => {
       </header>
 
       <section className="hero">
-        <h1>Welcome to Ball Out</h1>
-        <p>Join the most immersive fantasy sports experience ever. Compete with friends, track your progress, and win amazing prizes!</p>
-        <button>Get Started</button>
+        <div className="hero-content">
+          <h1>Welcome to Fantasy Sports</h1>
+          <p>Join the most immersive fantasy sports experience ever. Compete with friends, track your progress, and win amazing prizes!</p>
+          <button>Get Started</button>
+        </div>
       </section>
 
       <section id="features" className="features">
