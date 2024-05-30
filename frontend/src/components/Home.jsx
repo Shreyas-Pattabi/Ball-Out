@@ -15,7 +15,7 @@ const Home = () => {
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/">Login</Link></li>
+            <li><Link to="/login">Login</Link></li>
             <li><Link to="/lineup">Lineup</Link></li>
             <li><Link to="/matchup">Matchup</Link></li>
             <li><Link to="/my-league">League</Link></li>
@@ -29,7 +29,10 @@ const Home = () => {
         <div className="hero-content">
           <h1 className='mainTitle'>Welcome to BALL OUT!</h1>
           <p>Join the first ever bitcoin integrated immersive fantasy sports experience. Compete with friends, track your progress, and win amazing prizes!</p>
-          <button>Create An Account</button>
+
+          <Link to="/create-account" target="_blank">
+           <button >Create Account!</button>
+          </Link>
         </div>
       </div>
       <section id="features" className="features">
