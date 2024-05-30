@@ -5,7 +5,7 @@ import Draft from './components/Draft'
 import Players from './components/Players'
 import League from './components/League'
 import EditLineup from './components/EditLineup';
-import CreateAccount from './components/CreateAccount';
+// import CreateAccount from './components/CreateAccount';
 
 import {
   BrowserRouter as Router,
@@ -23,7 +23,7 @@ const App = () => {
         <Route path = "/players" element = {<Players/>}/>
         <Route path = "/my-league" element = {<League/>}/>
         <Route path = "/lineup" element = {<EditLineup/>}/>
-        <Route path="/create-account" element={<CreateAccount />}>
+        {/* <Route path="/create-account" element={<CreateAccount />}> */}
       </Routes>
     </Router>
   );

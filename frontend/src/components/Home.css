@@ -1,137 +1,123 @@
-/* Home.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-body {
+/* Basic reset */
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
 }
 
 .home {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .header {
-  background: #000000;
-  color: white;
-  padding: 10px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-bottom: 0px solid #990000;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 65px;
-    margin-right: 10px;
-  }
-  
-  .logo span {
-    font-size: 1.8em;
-    font-weight: bold;
-  }
-  
+.header .logo img {
+  height: 50px;
+}
 
 .header nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  gap: 20px;
-}
-
-.header nav ul li {
-  display: inline;
+  gap: 15px;
 }
 
 .header nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
-  transition: color 0.3s;
 }
 
-.header nav ul li a:hover {
-  color: #ffcc00;
+.top-bg {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px); /* Adjust height to fit the screen minus header */
+  overflow: hidden;
 }
 
-.hero {
-  background: linear-gradient(180deg, #0033cc, #990000);
-  color: white;
-  padding: 100px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
+.top-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hero-content {
-  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 10px;
 }
 
-.hero h1 {
+.hero-content h1 {
   font-size: 3em;
-  margin: 0 0 20px;
+  margin-bottom: 20px;
 }
 
-.hero p {
-  font-size: 1.5em;
-  margin: 0 0 30px;
-}
-
-.hero button {
-  background-color: #ffcc00;
-  color: black;
-  border: none;
-  padding: 15px 30px;
+.hero-content p {
   font-size: 1.2em;
-  cursor: pointer;
-  border-radius: 25px;
-  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
 }
 
-.hero button:hover {
-  background-color: #e6b800;
+.hero-content button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero-content button:hover {
+  background-color: #ff6347;
 }
 
 .features {
   padding: 50px 20px;
   background-color: #f4f4f4;
-}
-
-.features h2 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  color: #0033cc;
+  text-align: center;
 }
 
 .feature-list {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-}  
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
-.hero {
-    background: linear-gradient(180deg, rgba(0, 51, 204, 0.8), rgba(153, 0, 0, 0.8)), url('../assets/USATSI_23409094.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 100px 20px;
-  }
+.feature-item {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px;
+}
 
-  .footer {
-    background-color: #000000;
-    color: white;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    border-top: 2px solid #990000;
-  }
+.additional-content {
+  padding: 50px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.footer {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}

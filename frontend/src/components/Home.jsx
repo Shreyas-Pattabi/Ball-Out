@@ -1,8 +1,9 @@
-// src/Home.jsx
 import React from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logoBO.png'
+import logo from '../assets/logoBO.png';
+import videoBg from '../assets/home-video-bg.mp4';
+
 const Home = () => {
   return (
     <div className="home">
@@ -13,7 +14,7 @@ const Home = () => {
         </div>
         <nav>
           <ul>
-          <li><Link to="/">Home</Link></li>
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/">Login</Link></li>
             <li><Link to="/lineup">Lineup</Link></li>
             <li><Link to="/matchup">Matchup</Link></li>
@@ -23,15 +24,14 @@ const Home = () => {
           </ul>
         </nav>
       </header>
-
-      <section className="hero">
+      <div className='top-bg'>
+        <video src={videoBg} autoPlay loop muted />
         <div className="hero-content">
           <h1>Welcome to Ball Out!</h1>
           <p>Join the first ever bitcoin integrated immersive fantasy sports experience. Compete with friends, track your progress, and win amazing prizes!</p>
           <button>Create An Account</button>
         </div>
-      </section>
-
+      </div>
       <section id="features" className="features">
         <h2>Why Choose Us?</h2>
         <div className="feature-list">
@@ -44,33 +44,15 @@ const Home = () => {
             <p>Create and manage your own custom leagues with friends.</p>
           </div>
           <div className="feature-item">
-            <h3>Winners Everday</h3>
+            <h3>Winners Everyday</h3>
             <p>Win exclusive rewards based on your performance every game day.</p>
           </div>
         </div>
       </section>
-
       <section className="additional-content">
-        <h2><br />
-          <br />
-          <br />
-          <br />
-          <br /></h2>
-        <p> 
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br /><br />
-
-        </p>
+        <h2>More Information</h2>
+        <p>Explore more features and join the Ball Out community to experience the best in fantasy sports!</p>
       </section>
-
       <footer className="footer">
         <p>&copy; 2024 Ball Out App. All rights reserved.</p>
       </footer>
