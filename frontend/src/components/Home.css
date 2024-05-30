@@ -1,4 +1,6 @@
 /* Basic reset */
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Jacquard+12&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,10 @@
 
 body, html {
   height: 100%;
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
 }
 
 .home {
@@ -28,6 +34,10 @@ body, html {
   height: 50px;
 }
 
+.mainTitle {
+  font-weight: bolder;
+}
+
 .header nav ul {
   list-style: none;
   display: flex;
@@ -37,6 +47,12 @@ body, html {
 .header nav ul li a {
   color: white;
   text-decoration: none;
+}
+
+.jacquard-12-regular {
+  font-family: "Jacquard 12", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .top-bg {

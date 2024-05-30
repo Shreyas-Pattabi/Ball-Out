@@ -10,7 +10,7 @@ const Home = () => {
       <header className="header">
         <div className="logo">
           <img src={logo} alt="Ball Out Logo" />
-          <span>Ball Out</span>
+          <span></span>
         </div>
         <nav>
           <ul>
@@ -27,7 +27,7 @@ const Home = () => {
       <div className='top-bg'>
         <video src={videoBg} autoPlay loop muted />
         <div className="hero-content">
-          <h1>Welcome to Ball Out!</h1>
+          <h1 className='mainTitle'>Welcome to BALL OUT!</h1>
           <p>Join the first ever bitcoin integrated immersive fantasy sports experience. Compete with friends, track your progress, and win amazing prizes!</p>
           <button>Create An Account</button>
         </div>
