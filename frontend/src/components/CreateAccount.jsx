@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import {useState, useEffect } from 'react';
-// import {
-//   AppConfig,
-//   UserSession,
-//   showConnect,
-//   openContractCall,
-// } from "@stacks/connect";
-// import { StacksMocknet } from "@stacks/network";
-// import { principalCV, stringUtf8CV, uintCV } from "@stacks/transactions";
-=======
 import React, { useState, useEffect } from 'react';
 import {
   AppConfig,
@@ -19,7 +7,6 @@ import {
 } from "@stacks/connect";
 import { StacksMocknet } from "@stacks/network";
 import { principalCV, uintCV } from "@stacks/transactions";
->>>>>>> 02ad387f92263d3e43ab8731c038073281866755
 import { Link } from 'react-router-dom';
 import logo from '../assets/logoBO.png';
 import './CreateAccount.css';

@@ -5,10 +5,11 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import requests
 from django.http import JsonResponse
+import certifi
 # Create your views here.
 connection = 'mongodb+srv://spattabik:Z1QT1S7SOxDFoitO@ballout.njyrifj.mongodb.net/?retryWrites=true&w=majority&appName=BallOut'
 
-client = MongoClient(connection)
+client = MongoClient(connection, tlsCAFile=certifi.where())
 db = client.Ballout
 
 players = db['Players']
