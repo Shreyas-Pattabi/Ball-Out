@@ -6,7 +6,7 @@ import {
   showConnect,
   openContractCall,
 } from "@stacks/connect";
-import { StacksMocknet } from "@stacks/network";
+import { StacksMocknet, StacksTestnet } from "@stacks/network";
 import { principalCV, uintCV } from "@stacks/transactions";
 
 import { Link } from 'react-router-dom';
@@ -15,7 +15,7 @@ import './CreateAccount.css';
 
 const appConfig = new AppConfig(['store_write', 'publish_data']);
 const userSession = new UserSession({ appConfig });
-const network = new StacksMocknet();
+const network = new StacksTestnet();
 const appDetails = {
   name: "Hello Stacks",
   icon: "https://freesvg.org/img/1541103084.png",
@@ -42,6 +42,10 @@ const CreateAccount = () => {
     } else if (userSession.isUserSignedIn()) {
       setUserData(userSession.loadUserData());
     }
+    // userSession.handlePendingSignIn().then((userData) => {
+    //       setUserData(userData);
+    //     });
+    
   }, []);
   
   console.log(userData);
@@ -50,10 +54,10 @@ const CreateAccount = () => {
     e.preventDefault();
 
     const options = {
-      contractAddress: "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM",
-      contractName: "players",
+      contractAddress: "ST3P58MSNPCSA2339QXFS4G9KF6DA6GVBMDRCK4RF",
+      contractName: "nft_players",
       functionName: "mint",
-      functionArgs: [principalCV('ST1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5'), uintCV(10)],
+      functionArgs: [],
       network,
       appDetails,
       onFinish: ({ txId }) => console.log(txId),
