@@ -6,6 +6,7 @@ from pymongo.server_api import ServerApi
 import requests
 from django.http import JsonResponse
 import certifi
+from bson import ObjectId
 # Create your views here.
 connection = 'mongodb+srv://spattabik:Z1QT1S7SOxDFoitO@ballout.njyrifj.mongodb.net/?retryWrites=true&w=majority&appName=BallOut'
 
@@ -72,6 +73,7 @@ def updateData():
                            'blocks': player[26],
                            'points': player[30],
                            'fantasy_pts': player[32],
+                           'user_id': ''
                            })
 
    fantasyList.sort(key=lambda score: score['fantasy_pts'], reverse=True)
@@ -94,5 +96,7 @@ def updateData():
    except pymongo.errors.OperationFailure:
        print("Write Failed")
 
-# updateData()
+# print(type(players.find_one({'first_name': 'Luka'})['_id']))
+
+updateData()
 
