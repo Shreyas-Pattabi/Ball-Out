@@ -11,7 +11,7 @@ plan:
         - contract-publish:
             contract-name: players
             expected-sender: ST3P58MSNPCSA2339QXFS4G9KF6DA6GVBMDRCK4RF
-            cost: 44170
+            cost: 1639
             path: contracts/players.clar
             anchor-block-only: true
             clarity-version: 2
