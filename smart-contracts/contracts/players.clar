@@ -153,7 +153,7 @@
   (begin
     ;; Transfer the mint fee to the contract owner
     ;; (try! (stx-transfer? u100 tx-sender contract-owner))
-    (try! (stx-transfer? mint-fee tx-sender 'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM))
+    (try! (stx-transfer? mint-fee tx-sender 'ST3P58MSNPCSA2339QXFS4G9KF6DA6GVBMDRCK4RF))
 
     ;; Calculate the new token ID
     (let ((token-id (+ (var-get last-token-id) u1)))
