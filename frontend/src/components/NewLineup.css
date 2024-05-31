@@ -87,7 +87,7 @@ nav ul li a {
     border: none;
     cursor: pointer;
     font-size: 1.2em;
-    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .card-content {
@@ -120,9 +120,9 @@ nav ul li a {
 
 .add-player {
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 10px;
-    font-size: 27px;
+    font-size: 30px;
     cursor: pointer;
     z-index: 1;
 }
