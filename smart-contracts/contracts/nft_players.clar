@@ -1,4 +1,3 @@
-
 (define-constant contract-owner tx-sender) 
 (define-constant err-owner-only (err u100))
 (define-constant err-not-token-owner (err u101))
@@ -37,20 +36,16 @@
 )
 
 
-(define-public (mint (recipient principal) (mint-fee uint))
+(define-public (mint)
   (begin
-    ;; Transfer the mint fee to the contract owner
-    ;; (try! (stx-transfer? u100 tx-sender contract-owner))
-    (try! (stx-transfer? mint-fee tx-sender 'ST3P58MSNPCSA2339QXFS4G9KF6DA6GVBMDRCK4RF))
-
     ;; Calculate the new token ID
     (let ((token-id (+ (var-get last-token-id) u1)))
-      
-      ;; Ensure the tx-sender is the recipient
-      (asserts! (is-eq tx-sender recipient) (err u1000))
+
+    ;;   ;; Ensure the tx-sender is the recipient
+    ;;   (asserts! (is-eq tx-sender recipient) (err u1000))
 
       ;; Mint the new NFT to the recipient
-      (try! (nft-mint? players token-id recipient))
+      (try! (nft-mint? players token-id tx-sender))
 
       ;; Update the last token ID
       (var-set last-token-id token-id)
@@ -59,4 +54,12 @@
       (ok token-id)
     )
   )
+)
+
+(define-public (transfer-to-deployer (mint-fee uint))
+(begin 
+    (try! (stx-transfer? mint-fee tx-sender 'ST3P58MSNPCSA2339QXFS4G9KF6DA6GVBMDRCK4RF))
+    (ok mint-fee)
+)
+  
 )

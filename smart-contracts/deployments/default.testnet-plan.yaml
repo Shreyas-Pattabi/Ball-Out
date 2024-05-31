@@ -9,10 +9,10 @@ plan:
     - id: 0
       transactions:
         - contract-publish:
-            contract-name: players
+            contract-name: nft_players
             expected-sender: ST3P58MSNPCSA2339QXFS4G9KF6DA6GVBMDRCK4RF
-            cost: 1639
-            path: contracts/players.clar
+            cost: 15620
+            path: contracts/nft_players.clar
             anchor-block-only: true
             clarity-version: 2
       epoch: "2.5"

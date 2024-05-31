@@ -5,12 +5,10 @@ authors = []
 telemetry = true
 cache_dir = './.cache'
 requirements = []
-[contracts.players]
-path = 'contracts/players.clar'
+[contracts.nft_players]
+path = 'contracts/nft_players.clar'
 clarity_version = 2
 epoch = 2.5
-[stacks]
-node = "http://192.168.87.22:20443"
 [repl.analysis]
 passes = ['check_checker']
 
