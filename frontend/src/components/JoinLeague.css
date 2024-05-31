@@ -47,12 +47,38 @@ body, html {
 .join-league-container {
   flex: 1;
   padding: 75px 20px;
-  background: linear-gradient(135deg, rgb(26, 22, 39), rgb(0, 0, 0));
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
+
+.outside video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  filter: brightness(30%);
+  top: 50;
+  left: 0;
+}
+
+.form-one {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1); /* Adjusted to make it more transparent */
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+  border-radius: 0px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
+  padding: 50px 35px;
+}
+
 
 .mainTitle {
   font-size: 3em;
@@ -69,7 +95,7 @@ body, html {
 }
 
 .league-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.491);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

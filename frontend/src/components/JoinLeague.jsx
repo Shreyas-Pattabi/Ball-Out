@@ -2,6 +2,7 @@ import React from 'react';
 import './JoinLeague.css';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logoBO.png';
+import bgvid from '../assets/jlvidbg.mp4'
 
 const JoinLeague = () => {
   const leagues = [
@@ -28,6 +29,9 @@ const JoinLeague = () => {
           </ul>
         </nav>
       </header>
+      <div className="outside">
+       <video src={bgvid} autoPlay loop muted />
+       <form className="form-one">
       <div className="join-league-container">
         <h1 className="mainTitle">Join a League</h1>
         <div className="leagues-list">
@@ -40,9 +44,11 @@ const JoinLeague = () => {
           ))}
         </div>
       </div>
+      </form>
       <footer className="footer">
         <p>&copy; 2024 Ball Out App. All rights reserved.</p>
       </footer>
+    </div>
     </div>
   );
 };

@@ -7,7 +7,6 @@ import League from './components/League'
 import EditLineup from './components/EditLineup';
 import Login from './components/Login'
 
-import Tester from './Tester';
 import CreateAccount from './components/CreateAccount';
 import JoinLeague from './components/JoinLeague';
 
