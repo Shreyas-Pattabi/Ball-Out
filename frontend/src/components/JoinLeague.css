@@ -12,7 +12,6 @@ body, html {
   font-family: "Didact Gothic", sans-serif;
   font-weight: 400;
   font-style: normal;
-
 }
 
 .home {
@@ -53,7 +52,6 @@ body, html {
   flex-direction: column;
   align-items: center;
   text-align: center;
-
 }
 
 .mainTitle {
@@ -68,32 +66,23 @@ body, html {
   flex-wrap: wrap;
   justify-content: center;
   gap: 100px;
-  
 }
 
 .league-card {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Added background-color transition */
-    width: 300px;
-    text-align: left;
-  }
-.league-card:hover {
-    font-weight: bold;
-    color: #eb5008;
-  
-    -webkit-transition: color .5s ease;
-    -o-transition: color .5s ease;
-    transition: color .5s ease  }
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  width: 300px;
+  text-align: left;
+}
 
 .league-card h2 {
   margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
   color: #333;
-  
 }
 
 .league-card p {
@@ -113,14 +102,24 @@ body, html {
 
 .league-card .join-button:hover {
   background-color: #ff6347;
-  
 }
 
 .league-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  
+}
 
+/* Hover effects for specific leagues */
+.league-card.bronze:hover {
+  background-color: #cd7f32; /* Bronze color */
+}
+
+.league-card.silver:hover {
+  background-color: #c0c0c0; /* Silver color */
+}
+
+.league-card.gold:hover {
+  background-color: #f7d61d; /* Gold color */
 }
 
 .footer {
@@ -128,5 +127,4 @@ body, html {
   background-color: #000000;
   color: white;
   text-align: center;
-  
 }

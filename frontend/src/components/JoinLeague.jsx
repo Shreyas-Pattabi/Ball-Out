@@ -5,9 +5,9 @@ import logo from '../assets/logoBO.png';
 
 const JoinLeague = () => {
   const leagues = [
-    { name: 'Bronze League', entryFee: '0.10 BTC' },
-    { name: 'Silver League', entryFee: '0.50 BTC' },
-    { name: 'Gold League', entryFee: '1.00 BTC' },
+    { name: 'Bronze League', entryFee: '0.10 BTC', className: 'bronze' },
+    { name: 'Silver League', entryFee: '0.50 BTC', className: 'silver' },
+    { name: 'Gold League', entryFee: '1.00 BTC', className: 'gold' },
   ];
 
   return (
@@ -32,7 +32,7 @@ const JoinLeague = () => {
         <h1 className="mainTitle">Join a League</h1>
         <div className="leagues-list">
           {leagues.map((league, index) => (
-            <div className="league-card" key={index}>
+            <div className={`league-card ${league.className}`} key={index}>
               <h2>{league.name}</h2>
               <p><strong>Entry Fee:</strong> {league.entryFee}</p>
               <button className="join-button">Join Now</button>
