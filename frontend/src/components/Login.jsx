@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import logo from '../assets/logoBO.png';
 import videoBg2 from '../assets/Loginbg.mp4';
+import axios from 'axios';
 
 const Login = () => {
+
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
+  const login = async () => {
+    try {
+      const response = await axios.post('http://localhost:8000/api/login/', {user: username, pass: password})
+    }
+    catch(error) {
+      console.error('Error logging in', error)
+    }
+  }
+
   return (
     <div>
       <header className="header">
@@ -30,11 +44,11 @@ const Login = () => {
         <form className="login-form">
           <h3>Login Here</h3>
           <label htmlFor="username">Username</label>
-          <input type="text" placeholder="Email or Phone" id="username" style={{ color: '#ffffff' }}/>
+          <input type="text" placeholder="Email or Phone" id="username" style={{ color: '#ffffff' }} onChange={(e) => setUsername(e.target.value)}/>
           <label htmlFor="password">Password</label>
-          <input type="password" placeholder="Password" id="password" style={{ color: '#ffffff' }}/>
+          <input type="password" placeholder="Password" id="password" style={{ color: '#ffffff' }} onChange={(e) => setPassword(e.target.value)}/>
           <div className="login">
-            <button type="submit" className="login-button">Log In</button>
+            <button type="submit" className="login-button" onClick={login}>Log In</button>
           </div>
           <div className="social">
             <div className="social-button go"><i className="fab fa-google"></i> Google</div>

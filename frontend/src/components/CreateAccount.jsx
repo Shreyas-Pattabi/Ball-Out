@@ -12,7 +12,7 @@ import { principalCV, uintCV } from "@stacks/transactions";
 import { Link } from 'react-router-dom';
 import logo from '../assets/logoBO.png';
 import './CreateAccount.css';
-
+import axios from 'axios';
 const appConfig = new AppConfig(['store_write', 'publish_data']);
 const userSession = new UserSession({ appConfig });
 const network = new StacksTestnet();
@@ -24,6 +24,18 @@ const appDetails = {
 const CreateAccount = () => {
 
   const [userData, setUserData] = useState(undefined);
+
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
+  const createAccount = async () => {
+    try {
+      const response = await axios.post('http://localhost:8000/api/create_account/', {user: username, pass: password})
+    }
+    catch(error) {
+      console.error('Error logging in', error)
+    }
+  }
 
   const connectWallet = (e) => {
     e.preventDefault();
@@ -65,6 +77,7 @@ const CreateAccount = () => {
 
     await openContractCall(options);
   };
+  
 
   return (
     <div>
@@ -94,10 +107,10 @@ const CreateAccount = () => {
         <h3>Sign Up</h3>
 
         <label htmlFor="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username" />
+        <input type="text" placeholder="Email or Phone" id="username" onChange={(e) => setUsername(e.target.value)}/>
 
         <label htmlFor="password">Password</label>
-        <input type="password" placeholder="Password" id="password" />
+        <input type="password" placeholder="Password" id="password" onChange={(e) => setPassword(e.target.value)}/>
 
         {
           !userData && (
@@ -109,7 +122,7 @@ const CreateAccount = () => {
             </button>
           )
         }
-        <button className='sign-up' onClick={mint_nft}>Sign Up</button>
+        <button className='sign-up' onClick={createAccount}>Sign Up</button>
       </form>
     </div>
   );
