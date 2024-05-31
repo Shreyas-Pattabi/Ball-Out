@@ -25,31 +25,22 @@ const Login = () => {
         </nav>
       </header>
       <div className="outer">
-      { <video src={videoBg2} autoPlay loop muted />}
-      <div className="background">
-      </div>
-      
-      <form className="login-form">
-        <h3>Login Here</h3>
-        
-        <label htmlFor="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username" style={{ color: '#ffffff' }}/>
-        
-        <label htmlFor="password">Password</label>
-        <input type="password" placeholder="Password" id="password" style={{ color: '#ffffff' }}/>
-        
-        <div className="login">
-          <i className="login"></i>
-          <div className="log">
-            <button type="submit">Log In</button>
+        <video src={videoBg2} autoPlay loop muted />
+        <div className="background" />
+        <form className="login-form">
+          <h3>Login Here</h3>
+          <label htmlFor="username">Username</label>
+          <input type="text" placeholder="Email or Phone" id="username" style={{ color: '#ffffff' }}/>
+          <label htmlFor="password">Password</label>
+          <input type="password" placeholder="Password" id="password" style={{ color: '#ffffff' }}/>
+          <div className="login">
+            <button type="submit" className="login-button">Log In</button>
           </div>
-        </div>
-        
-        <div className="social">
-          <div className="social-button go"><i className="fab fa-google"></i> Google</div>
-          <div className="social-button fb"><i className="fab fa-facebook"></i> Facebook</div>
-        </div>
-      </form>
+          <div className="social">
+            <div className="social-button go"><i className="fab fa-google"></i> Google</div>
+            <div className="social-button fb"><i className="fab fa-facebook"></i> Facebook</div>
+          </div>
+        </form>
       </div>
     </div>
   );
