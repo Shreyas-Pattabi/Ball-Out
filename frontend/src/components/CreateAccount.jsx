@@ -88,10 +88,10 @@ const CreateAccount = () => {
         <h3>Sign Up</h3>
 
         <label htmlFor="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username" />
+        <input type="text" placeholder="Email or Phone" id="username" style={{ color: '#ffffff' }}/>
 
         <label htmlFor="password">Password</label>
-        <input type="password" placeholder="Password" id="password" />
+        <input type="password" placeholder="Password" id="password" style={{ color: '#ffffff' }}/>
 
         {
           !userData && (
