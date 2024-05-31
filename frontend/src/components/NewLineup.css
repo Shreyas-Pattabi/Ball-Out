@@ -158,3 +158,28 @@ nav ul li a {
     cursor: pointer;
     z-index: 1; /* Ensure the content stays above the background image */
 }
+
+.custom-button {
+    background-color: #007BFF; /* Primary blue color */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0 10px; /* Space between buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.custom-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.custom-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Custom focus shadow */
+}
+
+.custom-button:active {
+    background-color: #004085; /* Even darker blue on click */
+}

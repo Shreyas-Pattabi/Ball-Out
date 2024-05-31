@@ -44,6 +44,10 @@ const Draft = () => {
                     </ul>
                 </nav>
             </header>
+            <div className="button-container">
+                <button className="custom-button">Button 1</button>
+                <button className="custom-button">Button 2</button>
+            </div>
             <div className="cards-container">
                 {nbaPlayers.map((player, index) => (
                     <div key={index} className="player-card">
