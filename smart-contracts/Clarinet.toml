@@ -5,8 +5,8 @@ authors = []
 telemetry = true
 cache_dir = './.cache'
 requirements = []
-[contracts.nft_players]
-path = 'contracts/nft_players.clar'
+[contracts.nft-player-cards]
+path = 'contracts/nft-player-cards.clar'
 clarity_version = 2
 epoch = 2.5
 [repl.analysis]
