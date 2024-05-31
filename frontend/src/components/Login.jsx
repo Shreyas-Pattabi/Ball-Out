@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 import logo from '../assets/logoBO.png';
 import videoBg2 from '../assets/Loginbg.mp4';
@@ -9,10 +9,15 @@ const Login = () => {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-
+  const navigate = useNavigate()
   const login = async () => {
     try {
       const response = await axios.post('http://localhost:8000/api/login/', {user: username, pass: password})
+      localStorage.setItem('user_id', username)
+      if (response.data['message'] == 'Login Successful'){
+        navigate('/join-league')
+      }
+      console.log(response.data['message'])
     }
     catch(error) {
       console.error('Error logging in', error)
@@ -29,12 +34,6 @@ const Login = () => {
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/lineup">Lineup</Link></li>
-            <li><Link to="/matchup">Matchup</Link></li>
-            <li><Link to="/my-league">League</Link></li>
-            <li><Link to="/draft">Draft</Link></li>
-            <li><Link to="/players">Free Agents</Link></li>
           </ul>
         </nav>
       </header>
@@ -48,7 +47,7 @@ const Login = () => {
           <label htmlFor="password">Password</label>
           <input type="password" placeholder="Password" id="password" style={{ color: '#ffffff' }} onChange={(e) => setPassword(e.target.value)}/>
           <div className="login">
-            <button type="submit" className="login-button" onClick={login}>Log In</button>
+            <button type="button" className="login-button" onClick={login}>Log In</button>
           </div>
           <div className="social">
             <div className="social-button go"><i className="fab fa-google"></i> Google</div>

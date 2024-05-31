@@ -11,7 +11,7 @@ const Draft = () => {
     const [nbaPlayers, setNbaPlayers] = useState([{}])
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/players/')
+        axios.get('http://localhost:8000/api/free_players/')
             .then(response => {
                 setNbaPlayers(JSON.parse(response.data))
             })

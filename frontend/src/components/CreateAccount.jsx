@@ -9,7 +9,7 @@ import {
 import { StacksMocknet, StacksTestnet } from "@stacks/network";
 import { principalCV, uintCV } from "@stacks/transactions";
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logoBO.png';
 import './CreateAccount.css';
 import axios from 'axios';
@@ -27,10 +27,13 @@ const CreateAccount = () => {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-
+  const navigate = useNavigate()
   const createAccount = async () => {
     try {
       const response = await axios.post('http://localhost:8000/api/create_account/', {user: username, pass: password})
+      if (response.data['message'] == 'Account successfully created') {
+        navigate('/login')
+      }
     }
     catch(error) {
       console.error('Error logging in', error)
@@ -89,12 +92,6 @@ const CreateAccount = () => {
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/lineup">Lineup</Link></li>
-            <li><Link to="/matchup">Matchup</Link></li>
-            <li><Link to="/my-league">League</Link></li>
-            <li><Link to="/draft">Draft</Link></li>
-            <li><Link to="/players">Free Agents</Link></li>
           </ul>
         </nav>
       </header>
@@ -122,7 +119,7 @@ const CreateAccount = () => {
             </button>
           )
         }
-        <button className='sign-up' onClick={createAccount}>Sign Up</button>
+        <button type="button" className='sign-up' onClick={createAccount}>Sign Up</button>
       </form>
     </div>
   );

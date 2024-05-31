@@ -10,19 +10,7 @@ const Home = () => {
       <header className="header">
         <div className="logo">
           <img src={logo} alt="Ball Out Logo" />
-          <span></span>
         </div>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/lineup">Lineup</Link></li>
-            <li><Link to="/matchup">Matchup</Link></li>
-            <li><Link to="/my-league">League</Link></li>
-            <li><Link to="/draft">Draft</Link></li>
-            <li><Link to="/players">Free Agents</Link></li>
-          </ul>
-        </nav>
       </header>
       <div className='top-bg'>
         <video src={videoBg} autoPlay loop muted />
@@ -33,8 +21,8 @@ const Home = () => {
             <Link to="/create-account" target="_blank">
               <button>Create Account</button>
             </Link>
-            <Link to="/join-league" target="_blank">
-              <button>Join a League</button>
+            <Link to="/login" target="_blank">
+              <button>Login</button>
             </Link>
           </div>
         </div>
