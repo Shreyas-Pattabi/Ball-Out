@@ -1,5 +1,3 @@
-/* NewLineup.css */
-
 .logo {
     display: flex;
     align-items: center;
@@ -41,8 +39,8 @@ nav ul li a {
 }
 
 .player-card {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
     border-radius: 8px;
     padding: 15px;
     display: flex;
@@ -52,6 +50,28 @@ nav ul li a {
     transition: transform 0.3s;
     position: relative;
     height: 350px; /* Fixed height */
+    color: white;
+    overflow: hidden; /* Ensure the pseudo-element stays within the card bounds */
+}
+
+.player-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/logoBGtrans.png'); /* Path to your logo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0; /* Initially hide the background image */
+    transition: opacity 0.3s;
+    z-index: 0; /* Place the pseudo-element behind the card content */
+}
+
+.player-card:hover::before {
+    opacity: 0.2; /* Adjust the opacity value as needed */
 }
 
 .player-card:hover {
@@ -64,6 +84,7 @@ nav ul li a {
     align-items: center;
     margin-bottom: 10px;
     width: 100%;
+    z-index: 1; /* Ensure the content stays above the background image */
 }
 
 .card-body {
@@ -71,6 +92,7 @@ nav ul li a {
     flex-direction: column;
     gap: 10px;
     text-align: center;
+    z-index: 1; /* Ensure the content stays above the background image */
 }
 
 .player-card h3 {
@@ -88,6 +110,7 @@ nav ul li a {
     cursor: pointer;
     font-size: 1.2em;
     margin-right: 5px;
+    color: #ffffff;
 }
 
 .card-content {
@@ -104,6 +127,7 @@ nav ul li a {
 
 .additional-info {
     display: none;
+    z-index: 1; /* Ensure the content stays above the background image */
 }
 
 .player-card:hover .additional-info {
@@ -112,10 +136,18 @@ nav ul li a {
 
 .image-info {
     display: block;
+    z-index: 1; /* Ensure the content stays above the background image */
 }
 
 .player-card:hover .image-info {
     display: none;
+}
+
+.image-info img {
+    border-radius: 50%;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
 }
 
 .add-player {
@@ -124,5 +156,5 @@ nav ul li a {
     right: 10px;
     font-size: 30px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 1; /* Ensure the content stays above the background image */
 }
