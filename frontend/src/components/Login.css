@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
 
-*:after{
+*:after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-      }
-body{
+}
+
+body {
     background-color: #000000;
 }
-.background{
+
+.background {
     width: 430px;
     height: 520px;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
 }
@@ -25,66 +27,75 @@ body{
     filter: brightness(30%);
     top: 50;
     left: 0;
-  }
-  
+}
 
-.background .shape{
+.background .shape {
     height: 200px;
     width: 200px;
     position: absolute;
     border-radius: 50%;
 }
 
-form{
+form {
     height: 520px;
     width: 400px;
-    background-color: rgba(255,255,255,0.13);
+    background-color: rgba(255, 255, 255, 0.13);
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     border-radius: 50px;
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
     padding: 50px 35px;
 }
-form *{
-    font-family: 'Poppins',sans-serif;
+
+form * {
+    font-family: 'Poppins', sans-serif;
     color: #ffffff;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
 }
-form h3{
+
+form h3 {
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
     text-align: center;
 }
 
-label{
+label {
     display: block;
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
 }
-input{
+
+input {
     display: block;
     height: 50px;
     width: 100%;
-    background-color: rgba(255,255,255,0.07);
+    background-color: rgba(255, 255, 255, 0.07);
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 8px;
     font-size: 18px;
     font-weight: 300;
 }
-::placeholder{
+
+::placeholder {
     color: #e5e5e5;
 }
-.submit .log{
-    margin-top: 75px;
+
+.login {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.login-button {
     width: 100%;
     background-color: #ffffff;
     color: #080710;
@@ -93,44 +104,46 @@ input{
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
 }
 
 .social {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-  }
-  
-  .social-button {
+}
+
+.social-button {
     width: 48%;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .social-button i {
+}
+
+.social-button i {
     margin-right: 8px;
-  }
+}
+
 .social-button.go {
     background-color: rgba(255, 0, 0, 0.7);
-  }
-  
-  .social-button.go:hover {
+}
+
+.social-button.go:hover {
     background-color: rgba(255, 0, 0, 0.9);
-  }
-  
-  .social-button.fb {
+}
+
+.social-button.fb {
     background-color: rgba(24, 69, 173, 0.7);
-  }
-  
-  .social-button.fb:hover {
+}
+
+.social-button.fb:hover {
     background-color: rgba(24, 69, 173, 0.9);
-  }
-
-
-
-
-
-
+}
