@@ -17,7 +17,7 @@ const EditLineup = () => {
             console.log(error);
           });
       }, []);
-
+    console.log(nbaPlayers)
     return (
         <div className="home">
             <header className="header">

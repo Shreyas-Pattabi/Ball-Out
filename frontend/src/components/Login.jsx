@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import logo from '../assets/logoBO.png';
-// import videoBg2 from '../assets/Loginbg.mp4';
+import videoBg2 from '../assets/Loginbg.mp4';
 
 const Login = () => {
   return (
@@ -25,7 +25,7 @@ const Login = () => {
         </nav>
       </header>
       <div className="outer">
-      {/* <video src={videoBg2} autoPlay loop muted /> */}
+      { <video src={videoBg2} autoPlay loop muted />}
       <div className="background">
       </div>
       
